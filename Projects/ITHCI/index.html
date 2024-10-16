@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopt Me</title>
+    <link rel="stylesheet" href="navigation.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="searchbar.css">
+    <link rel="stylesheet" href="section2.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="modall.css">
+</head>
+<body>
+    <div class="navigation">
+        <div class="navv-container">
+            <nav>
+                <ul class="menu">
+                    <a class="brand" href="index.html"><h1>AdoptMe</h1></a>
+                    <img src="photos/logo1.jpg">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                    <div class="dropdown">
+                        <button class="dropbtn"><li><a href="about.html">Pets</a></li></button>
+                        <div class="dropdown-content">
+                          <a href="dogs.html">Dogs</a>
+                          <a href="cats.html">Cats</a>
+                          <a href="tagline.html">Other Animals</a>
+                          <a href="history.html">Shelter</a>
+                        </div>
+                      </div>
+                      <li><a href="aboutus.html">About us</a></li>
+                </ul>
+                <ul class="rightmenu">
+                    <li id="signinButton"><a href="#" onclick="opensignup(); updateButtonsAfterLogin();">Sign In</a></li>
+                    <li id="profileButton" style="display: none;"><a href="#" onclick="event.preventDefault(); window.location.href='profile.html';">Profile</a></li>
+                    <li class="vertical-line"></li>
+                    <li id="signupButton"><a href="createjob.html" onclick="openSignupModal()">Sign Up</a></li>
+                    <li id="logoutButton" style="display: none;"><a href="#" onclick="logout()">Logout</a></li>
+                </ul>                                                       
+            </nav>
+        </div>
+    </div>
+        <!-- Modal for Sign-in and Sign-up -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <!-- Your modal content -->
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Welcome to Adopt Me!</h2>
+                <!-- Sign-in form -->
+                <form id="loginForm" onsubmit="submitLoginForm(event)">
+                    <input type="text" id="username" placeholder="Username or Email" required>
+                    <input type="password" id="password" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                    <p>Don't have an account? <a href="#" onclick="toggleForm()">Sign Up</a></p>
+                </form>
+                
+                <!-- Sign-up form (initially hidden) -->
+                <form id="signupForm" class="signup" style="display: none;" onsubmit="submitSignupForm(event)">
+                    <input type="text" id="newUsername" placeholder="Username" required>
+                    <input type="email" id="newEmail" placeholder="Email" required>
+                    <input type="password" id="newPassword" placeholder="Password" required>
+                    <button type="submit">Sign Up</button>
+                    <p>Already have an account? <a href="#" onclick="toggleForm()">Login</a></p>
+                </form>                
+            </div>
+        </div>
+
+    <div class="frontpg">
+        <!-- navigation -->
+        <form class="form">
+            <!-- Search Section -->
+            <div class="search-section">
+                <label for="search">
+                    <input required="" autocomplete="off" placeholder="Search Terrier, Kitten, etc." id="search" type="text">
+                    <div class="icon">
+                        <svg stroke-width="2" stroke="currentColor" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="swap-on">
+                            <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linejoin="round" stroke-linecap="round"></path>
+                        </svg>
+                        <svg stroke-width="2" stroke="currentColor" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="swap-off">
+                            <path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linejoin="round" stroke-linecap="round"></path>
+                        </svg>
+                    </div>
+                    <button type="reset" class="close-btn">
+                        <svg viewBox="0 0 20 20" class="h-5 w-5" xmlns="http://www.w3.org/2000/svg">
+                            <path clip-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" fill-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </label>
+            </div>
+            <div class="location-section">
+                <label for="location">
+                    <i class="fas fa-map-marker-alt icon"></i>
+                    <select id="location" required="" length="5">
+                        <option value="location1" disabled selected>Location</option>
+                        <option value="manila">Manila</option>
+                        <option value="cebu">Cebu</option>
+                        <option value="davao">Davao</option>
+                        <option value="quezon">Quezon City</option>
+                        <option value="makati">Makati</option>
+                        <option value="baguio">Baguio</option>
+                        <option value="iloilo">Iloilo</option>
+                        <option value="cagayan">Cagayan de Oro</option>
+                        <option value="pampanga">Pampanga</option>
+                        <option value="zamboanga">Zamboanga</option>
+                        <option value="iloilo">Iloilo</option>
+                        <option value="bacolod">Bacolod</option>
+                        <option value="tagaytay">Tagaytay</option>
+                        <option value="subic">Subic</option>
+                        <option value="antipolo">Antipolo</option>
+                        <option value="batangas">Batangas</option>
+                        <option value="cavite">Cavite</option>
+                        <option value="laoag">Laoag</option>
+                        <option value="naga">Naga</option>
+                        <option value="tagbilaran">Tagbilaran</option>
+                    </select>
+                </label>
+            </div>
+            <button id="src" type="submit">Find Pets</button>
+        </form>
+        <div class="textto">
+            <h1>Find your new Best Friend</h1>
+            <h2>Browse pets from all over Nueva Ecija</h2>
+            <a href="dogs.html" class="card">
+                <img src="pets/animal-puppy.gif " class="card-image">
+            </a>
+            
+            <a href="cats.html" class="card">
+                <img src="pets/peach-and-goma-peach-goma.gif" class="card-image">
+            </a>
+            
+            <a href="your_link_here" class="card">
+                <img src="pets/cat-paw.gif" class="card-image">
+            </a>
+            
+            <a href="your_link_here" class="card">
+                <img src="pets/peach-and.gif" class="card-image">
+            </a>
+                      
+        </div>
+    </div>
+        <div class="section2">
+            <h2>Planning to Adopt?</h2>
+            <div class="cardholder">
+                <a href="adoption.html" style="text-decoration: none; color: inherit;">
+                    <div class="cardd1">
+                        <span>1</span>
+                        <h1>PET ADOPTION<br> FAQS</h1>
+                        <p>Get all the answers to your all the questions you nay have </p>
+                    </div>
+                </a>
+                <a href="how.html" style="text-decoration: none; color: inherit;">
+                    <div class="cardd2">
+                        <span>2</span>
+                        <h1>HOW TO ADOPT<br> A PET</h1>
+                        <p>Find out how you can adopt and help dogs and cats</p>
+                    </div>
+                </a>
+                <a href="checklist.html" style="text-decoration: none; color: inherit;">
+                    <div class="cardd3">
+                        <span>3</span>
+                        <h1>CHECKLIST FOR<br> ADOPTERS</h1>
+                        <p>Make the adoption as fast and as smooth as possible.</p>
+
+                    </div>
+                </a>
+            </div>
+        </div>
+        <br>
+        <footer class="site-footer">
+            <div class="footer">
+              <div class="container34">
+                <div class="row34">
+                  <div class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved
+                    </p><br>
+                  </div>
+                  <div class="col-md-4 col-sm-6 col-xs-12">
+                    <ul class="social-icons">
+                      <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                      <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                      <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                      <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </footer>
+<script src="https://kit.fontawesome.com/b6531956e9.js" crossorigin="anonymous"></script>     
+<script src="loginsign.js"></script>
+</body>
+</html>

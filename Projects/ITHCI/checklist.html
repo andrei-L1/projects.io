@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist for Adopters</title>
+    <link rel="stylesheet" href="checklist.css">
+    <link rel="stylesheet" href="navigation.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="modall.css">
+</head>
+<body>
+    <div class="navigation">
+        <div class="navv-container">
+            <nav>
+                <ul class="menu">
+                    <a class="brand" href="index.html"><h1>AdoptMe</h1></a>
+                    <img src="photos/logo1.jpg">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                    <div class="dropdown">
+                        <button class="dropbtn"><li><a href="about.html">Pets</a></li></button>
+                        <div class="dropdown-content">
+                          <a href="dogs.html">Dogs</a>
+                          <a href="cats.html">Cats</a>
+                          <a href="tagline.html">Other Animals</a>
+                          <a href="history.html">Shelter</a>
+                        </div>
+                      </div>
+                      <li><a href="aboutus.html">About us</a></li>
+                </ul>
+                <ul class="rightmenu">
+                    <li id="signinButton"><a href="#" onclick="opensignup(); updateButtonsAfterLogin();">Sign In</a></li>
+                    <li id="profileButton" style="display: none;"><a href="#" onclick="event.preventDefault(); window.location.href='profile.html';">Profile</a></li>
+                    <li class="vertical-line"></li>
+                    <li id="signupButton"><a href="createjob.html" onclick="openSignupModal()">Sign Up</a></li>
+                    <li id="logoutButton" style="display: none;"><a href="#" onclick="logout()">Logout</a></li>
+                </ul>                                                       
+            </nav>
+        </div>
+    </div>
+        <!-- Modal for Sign-in and Sign-up -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <!-- Your modal content -->
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Welcome to Adopt Me!</h2>
+                <!-- Sign-in form -->
+                <form id="loginForm" onsubmit="submitLoginForm(event)">
+                    <input type="text" id="username" placeholder="Username or Email" required>
+                    <input type="password" id="password" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                    <p>Don't have an account? <a href="#" onclick="toggleForm()">Sign Up</a></p>
+                </form>
+                
+                <!-- Sign-up form (initially hidden) -->
+                <form id="signupForm" class="signup" style="display: none;" onsubmit="submitSignupForm(event)">
+                    <input type="text" id="newUsername" placeholder="Username" required>
+                    <input type="email" id="newEmail" placeholder="Email" required>
+                    <input type="password" id="newPassword" placeholder="Password" required>
+                    <button type="submit">Sign Up</button>
+                    <p>Already have an account? <a href="#" onclick="toggleForm()">Login</a></p>
+                </form>                
+            </div>
+        </div>
+    
+    
+    <div class="faq-container">
+        <h1>Checklist for Adopters</h1><br>
+    <p>Congratulations on adopting a pet! You are embarking on a wonderful and rewarding relationship. Because adopting a new pet comes with a lot of change for both pet and pet parent, we've compiled a checklist to help make the transition as smooth as possible.</p>
+        
+    <div class="question"><h3>Questions for All Adopters:</h3></div> <br>
+        <div class="answer">
+            <ul>
+                <li>Do you have any other pets and how will they react to a new pet?</li>
+                <li>Is your current residence suited to the pet you're considering?</li>
+                <li>How will your social life or work obligations affect your ability to care for a pet?</li>
+                
+            </ul>
+        </div>
+        
+        <div class="question"><h3>Other Considerations:</h3></div> <br>
+        <div class="answer">
+            <ul>
+                <li>If you are thinking of adopting a young animal, do you have the time and patience to work with the pet through its adolescence, taking house-breaking, chewing and energy-level into account?</li>
+                <li>Do you need a pet who will be reliable with children or one you can take with you when you travel?</li>
+                <li>Do you want a pet who follows you all around the house or would you prefer a less clingy, more independent character?</li>
+            </ul>
+        </div>
+        
+        <div class="question"><h3>Size Considerations (for Dogs):</h3></div> <br>
+        <div class="answer">
+            <ul>
+                <li>Do you have another pet to consider when choosing the size of your next pet?</li>
+                <li>What size dog can your home accommodate?</li>
+                <li>What size pet would suit the other people who live in or visit your home regularly?</li>
+            </ul>
+        </div>
+        
+        <div class="question"><h3>Pet Costs</h3></div> <br>
+        <div class="answer">
+            <ul>
+                <li>You may need to pay for your adopted pet to be spayed or neutered before bringing him or her home.</li>
+                <li>Some expenses are mandatory for all pets, including:
+                    <ul><li>Food</li>
+                        <li>Routine veterinary care</li>
+                        <li>Licensing according to local regulations</li>
+                        <li>Collars, leashes and identification tags</li>
+                        <li>Basic grooming equipment and supplies.</li>
+                    </ul>
+                </li>
+                <li>A pet with special physical or behavioral challenges may require specialized professional support to overcome any obstacles these issues present.</li>
+                
+            </ul>
+        </div>
+        
+        <div class="question"><h3>Time Considerations:</h3></div> <br>
+        <div class="answer">
+            <ul>
+                <li>Pets need to be fed two to three times a day, more often in the case of puppies, and need a constant supply of fresh water.</li>
+                <li>A pet with an abundance of energy needs more time to exercise and interactive toys to keep them entertained.
+                    Pets with long coats need 20 minutes a day of grooming to prevent matting.</li>
+            </ul>
+        </div>
+        
+        <div class="question"><h3>Shopping Checklist:</h3></div>
+        <div class="answer">
+            <p>It may be a good idea to wait until you select your new pet before you begin shopping for supplies. For example, some items, such as food and water bowls or collars and harnesses, depend upon the size of the pet you will be adopting.</p>
+            <p>Also, be sure to find out which food your pet was eating in the shelter or foster home so that you can provide the same in the beginning, again to ease the transition. After the pet has settled in, talk with your veterinarian about switching to the food of your choice.</p>
+            
+            <p>Once you've selected your pet, here's a checklist of supplies you may need:</p>
+            <ul>
+                <h3>Necessary Items for Dogs:</h3>
+                <li>Food and water bowl</li>
+                <li>Food (canned and/or dry)</li>
+                <li>Doggy shampoo and conditioner</li>
+                <li>Collar</li>
+                <li>Dog bed</li>
+                <li>Variety of toys (a ball, rope, chew toy and puzzle toy are good starts)</li>
+                <li>Variety of treats (such as small cookies, larger rawhides, etc.)</li>
+            </ul>
+
+            <ul>
+                <h3>Necessary Items for Cats:</h3>
+                <li>Food and water bowls</li>
+                <li>Food (canned and/or dry)</li>
+                <li>Litter box and scooper</li>
+                <li>Collar</li>
+                <li>Variety of toys (toys including catnip are a favorite)</li>
+                <li>Brush or comb (depends on your cat's coat length and type)</li>
+            </ul>
+        </div>
+    
+    </div><!-- End of faq-container -->
+
+    <br>
+    <footer class="site-footer">
+        <div class="footer">
+          <div class="container34">
+            <div class="row34">
+              <div class="col-md-8 col-sm-6 col-xs-12">
+                <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved
+                </p><br>
+              </div>
+              <div class="col-md-4 col-sm-6 col-xs-12">
+                <ul class="social-icons">
+                  <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                  <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    
+      <script src="https://kit.fontawesome.com/b6531956e9.js" crossorigin="anonymous"></script>     
+<script src="loginsign.js"></script>
+</body>
+</html>

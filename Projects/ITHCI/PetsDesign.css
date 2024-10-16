@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, "Liberation Sans", sans-serif;
+}
+body{
+    height: 100%; 
+    background-color: rgba(207, 206, 206, 0.521);
+}
+.parent {
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.nxtbar{
+    align-items: center;
+    height: 50px;
+    padding: 0px;
+    background-color: #0762a3;
+    position: relative;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    font-family: 'Montserrat', sans-serif;
+}
+.nxtbar {
+    display: flex;
+    justify-content: center; 
+    padding: 0;
+    margin: 0; 
+}
+
+.nxtbar ul {
+    display: flex;
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0; 
+}
+
+.nxtbar li {
+    margin-right: 800px;
+    
+}
+.nxtbar li a{
+    text-decoration: none;
+}
+
+.nxtbar li:last-child {
+    margin-right: 0; 
+}
+
+.nxtbar ul li a p {
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.parent .photoarea img {
+    max-height: 460px;
+    max-width: 100%;
+}
+
+
+
+
+.contains{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+.midbody{
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-between;
+    width: 60%;
+}
+
+
+.midbody .left {
+    height: 450px;
+    width: 63%; /* Set width for left div */
+    border-radius: 11px;
+    padding: 30px; /* Add padding for content inside */
+    background-color: white;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+.midbody .left h1{
+    font-family: Nexa Regular, arial, helvetica, sans-serif;
+    margin-bottom: 20px;
+    font-weight: 100;
+    font-size: 2.4rem;
+    letter-spacing: 1px;
+}
+.midbody .left h2{
+    font-family: Nexa Regular, arial, helvetica, sans-serif;
+    font-weight: 100;
+    font-size: 1.8rem;
+    margin-bottom: 13px;
+    letter-spacing: 1px;
+}
+.midbody .left h3{
+    font-family: Nexa Regular, arial, helvetica, sans-serif;
+    font-weight: 100;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+.midbody .left p{
+    font-weight: 100;
+    color: rgba(0, 0, 0, 0.575);
+    letter-spacing: 1px;
+}
+.midbody .left p span a{
+    color: #0762a3;
+}
+.midbody .left hr {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+
+.midbody .right {
+    height: 250px;
+    width: 25%; /* Set width for right div */
+    padding: 30px; /* Add padding for content inside */
+    border-radius: 11px;
+    color: white;
+    background-color: #0762a3;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: Nexa Regular, arial, helvetica, sans-serif;
+}
+
+.midbody .right h3{
+    margin-top: 12px;
+    margin-bottom: 30px;
+    font-family: Nexa Regular, arial, helvetica, sans-serif;
+    line-height: 26px;
+}
+
+.midbody .right button {
+    padding: 14px;
+    border-radius: 30px;
+    color: #0762a3;
+    background-color: white;
+    width: 100%;
+    font-weight: 700;
+    font-family: Nexa Regular, arial, helvetica, sans-serif;
+}
+.midbody .right button:hover{
+    background-color: #073e64;
+    cursor: pointer;
+    color: white;
+    transition: 0.2s;
+}
+
+.midbody .right .readfaq{
+  background-color: #0762a3;
+  border: 3px solid white;
+  color: white;
+  font-weight: 700;
+  font-family: Nexa Regular, arial, helvetica, sans-serif;
+}
+
+
+
+.slideshow-container {
+    max-width: 500px;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* Next and previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}

@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Nexa Regular', Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+.frontpg {
+  height: 68vh;
+  background-image: url(photos/5516806.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.textto h1 {
+  margin-top: 100px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 45px;
+  font-family: 'Nexa Regular', Arial, Helvetica, sans-serif;
+  text-shadow: 0 1px 10px #ececec2d, 0 0 4px #00000052;
+  color: #0762a3;
+}
+
+.textto h2 {
+  font-size: 24px;
+  font-family: 'Nexa Regular', Arial, Helvetica, sans-serif;
+  text-shadow: 0 1px 10px #ececec, 0 0 4px #00000052;
+  color: #0d598fc4;
+  font-weight: 500;
+  margin-top: 7px;
+  margin-bottom: 100px;
+}
+
+.textto {
+  text-align: center;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.5); 
+  border: 1px solid white;
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(6px);
+  border-radius: 17px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  font-weight: bolder;
+  color: black;
+}
+
+
+.card:hover {
+  border: 1px solid black;
+  transform: scale(1.05);
+}
+
+.card:active {
+  transform: scale(0.95) rotateZ(1.7deg);
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+}
+
+.card {
+  display: inline-block;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  .card {
+      width: calc(100% - 10px); /* Make cards full width with margin included */
+      height: auto;
+      margin: 5px 0;
+      padding: 5px;
+  }
+}

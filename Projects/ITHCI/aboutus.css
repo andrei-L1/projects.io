@@ -1,0 +1,85 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Nexa Regular', Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+.parent h1{
+  margin-top: 70px;
+  text-align: center;
+  text-shadow: 0 1px 10px #ececec2d, 0 0 4px #00000052;
+  font-size: 2.8rem;
+  font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, "Liberation Sans", sans-serif;
+  font-weight: 100;
+  letter-spacing: 2px;
+}
+
+.parent h2{
+  text-align: center;
+  text-shadow: 0 1px 10px #ececec2d, 0 0 4px #00000052;
+  font-size: 1.8rem;
+  font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, "Liberation Sans", sans-serif;
+  font-weight: 60;
+  letter-spacing: 2px;
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0px;
+}
+
+.parent .right{
+  max-height: 500px;
+  max-width: 510px;
+}
+.parent .right img{
+  max-height: 510px;
+  max-width: 550px;
+}
+.parent .left img{
+  max-height: 500px;
+  max-width: 510px;
+}
+.parent .left{
+  max-height: 500px;
+  max-width: 550px;
+}
+
+.parent p{
+  font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, "Liberation Sans", sans-serif;
+  letter-spacing: 2px;
+  text-align: justify;
+  font-size: 19px;
+  margin-left: 10px;
+}
+
+.parent .givee h2{
+  font-size: 1.8rem;
+  margin-top: 70px;
+  letter-spacing: 2px;
+  font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, "Liberation Sans", sans-serif;
+  margin-bottom: 10px;
+}
+
+
+.right button{
+  width: 180px;
+  height: 45px;
+  font-weight: 500;
+  font-size: medium;
+  margin-top: 30px;
+  border: none;
+  border-radius: 3px;
+  background-color: #0d598fc4;
+  color: white;
+  cursor: pointer;
+  margin-right: 320px;
+  margin-left: 16px;
+}
+
+.right button:hover{
+  background-color: #0762a3;
+}

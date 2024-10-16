@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Nexa Regular', Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: rgba(207, 206, 206, 0.521);
+}
+.containscard{
+    height: 100vh;
+    padding-top: 40px; 
+    box-sizing: border-box;
+}
+.containscard h1{
+    font-size: 2.50rem;
+    font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, "Liberation Sans", sans-serif;
+    font-weight: 100;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    padding-bottom: 20px;
+}
+.titlepg{
+    padding: 30px;
+    background-color: #ffffff;
+}
+
+.dddd{
+    padding: 20px;
+}
+.containcard1 {
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    margin: 0 auto;
+  }
+
+.toptt-container {
+    width: 1000px;
+    margin: 0 auto; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-top: 50px;
+    background-color: #298acf98;
+    
+    height: 200px;
+}
+
+.toptt {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px auto; 
+    width: 900px;
+    align-items: flex-start;
+    margin-left: 70px;
+}
+
+.toptt h1 {
+    color: rgba(34, 34, 34, 0.89);
+    font-size: 2.50rem;
+    line-height: 1.25;
+    font-family: "Indeed Sans", "Indeed Sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, "Liberation Sans", Roboto, Noto, sans-serif;
+    font-weight: 500;
+    text-shadow: rgba(250, 249, 248, 0) 0px 0px 16px, rgba(250, 249, 248, 0.445) 0px 0px 8px, rgba(250, 249, 248, 0.459) 0px 0px 4px;
+    margin-bottom: 10px;
+}
+
+.toptt-container img {
+    max-height: 100%;
+    width: auto;
+    border-radius: 10px;
+    margin-right: 100px;
+  }
+  
+@media (max-width: 768px) {
+    .containcard1 {
+        padding: 0 10px;
+    }
+
+    .toptt {
+        align-items: flex-start;
+        margin-left: 0;
+    }
+
+    .toptt-container {
+        padding: 10px;
+    }
+}

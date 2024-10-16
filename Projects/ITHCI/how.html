@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Adopt a Pet?</title>
+    <link rel="stylesheet" href="checklist.css">
+    <link rel="stylesheet" href="navigation.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="modall.css">
+</head>
+<body>
+    <div class="navigation">
+        <div class="navv-container">
+            <nav>
+                <ul class="menu">
+                    <a class="brand" href="index.html"><h1>AdoptMe</h1></a>
+                    <img src="photos/logo1.jpg">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                    <div class="dropdown">
+                        <button class="dropbtn"><li><a href="about.html">Pets</a></li></button>
+                        <div class="dropdown-content">
+                          <a href="dogs.html">Dogs</a>
+                          <a href="cats.html">Cats</a>
+                          <a href="tagline.html">Other Animals</a>
+                          <a href="history.html">Shelter</a>
+                        </div>
+                      </div>
+                      <li><a href="aboutus.html">About us</a></li>
+                </ul>
+                <ul class="rightmenu">
+                    <li id="signinButton"><a href="#" onclick="opensignup(); updateButtonsAfterLogin();">Sign In</a></li>
+                    <li id="profileButton" style="display: none;"><a href="#" onclick="event.preventDefault(); window.location.href='profile.html';">Profile</a></li>
+                    <li class="vertical-line"></li>
+                    <li id="signupButton"><a href="createjob.html" onclick="openSignupModal()">Sign Up</a></li>
+                    <li id="logoutButton" style="display: none;"><a href="#" onclick="logout()">Logout</a></li>
+                </ul>                                                       
+            </nav>
+        </div>
+    </div>
+        <!-- Modal for Sign-in and Sign-up -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <!-- Your modal content -->
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Welcome to Adopt Me!</h2>
+                <!-- Sign-in form -->
+                <form id="loginForm" onsubmit="submitLoginForm(event)">
+                    <input type="text" id="username" placeholder="Username or Email" required>
+                    <input type="password" id="password" placeholder="Password" required>
+                    <button type="submit">Login</button>
+                    <p>Don't have an account? <a href="#" onclick="toggleForm()">Sign Up</a></p>
+                </form>
+                
+                <!-- Sign-up form (initially hidden) -->
+                <form id="signupForm" class="signup" style="display: none;" onsubmit="submitSignupForm(event)">
+                    <input type="text" id="newUsername" placeholder="Username" required>
+                    <input type="email" id="newEmail" placeholder="Email" required>
+                    <input type="password" id="newPassword" placeholder="Password" required>
+                    <button type="submit">Sign Up</button>
+                    <p>Already have an account? <a href="#" onclick="toggleForm()">Login</a></p>
+                </form>                
+            </div>
+        </div>
+    <div class="faq-container">
+    <h1>How to Adopt a Pet? </h1><br>
+        <p>Congratulations! You’ve decided to adopt a new cat or dog into your family. Now that know you want to adopt a new pet, it’s a good idea to learn what goes into the adoption process. While it’s tempting to just pop down to your local shelter and take home the first dog or cat that catches your fancy, it’s important to know how to adopt a pet so the process goes smoothly.</p>
+<br>
+            <h3>Narrow the Field</h3><br>
+            <p>Knowing what type of dog or cat fits best in your home will help you as you look through adoptable pets, and help the shelter or rescue guide you in the right direction through the cat or dog adoption process.
+
+                <br><br>Consider the following things about the dog or cat you might want to adopt and narrow down what will work for your home, schedule, and lifestyle:</p>
+                
+                <ul>
+                    <li>Energy level and exercise needs (Will you be active with your new dog, or would you prefer a cat that chills on the couch with you most of the day?)</li>
+                    <li>Good with children or other pets</li>
+                    <li>Temperament (e.g. confident, cautious, independent, laid back, protective)</li>
+                    <li>Size</li>
+                    <li>Age</li>
+                    <li>Coat type (this will determine certain grooming care requirements)</li>
+                    <li>Training and behavior needs (For example, do you want a pet that’s already potty trained? Are you able to work with a pet that has some behavior challenges, like anxiety or noise aversion?)</li>
+                    
+                    <p>There are great resources you can use to narrow down the field and provide an easy way to search adoptable dogs and cats in your area. Some even have a quiz that can match your lifestyle to certain pet qualities.</p>
+                    
+                    <p>If you’re a first time owner, or not certain about what type of pet or breed is best suited for you, connect with a veterinarian or certified trainer before you adopt a dog or cat — they can answer your questions about what will be a good choice for your life and family. Plus, once you’ve adopted a new pet, you’ll already have an established relationship with these important resources.</p>
+
+                    
+</ul>
+                    <br><h3>Decide Where to Adopt</h3> <br>
+
+                    <p>The most common places to adopt a pet are a shelter or rescue. You can also purchase a pet from a breeder if you’re looking for a specific breed of puppy or kitten. Learn more about where to adopt a pet.</p>
+
+                   <br> <h3>The Adoption Process</h3> <br>
+
+                    <p>Once you’ve established some basics about what traits of a new dog or cat you’re looking for, it’s time to take stock of what’s available! It can take some time to find the right match, and some pet adoption processes are longer than others, so patience is key.</p>
+
+                    <br><h3>Check your local shelter and rescue websites to find out what dogs and cats are available for adoption.</h3><br>
+
+                    <p>If you see a dog or cat that you’re interested in at a shelter, find out the shelter's adoption hours so you can visit to see if they are a good match. Rescues work primarily through foster programs, so if you see a dog or cat available for adoption at a rescue, you’ll need to schedule a time for a meet-and-greet – sometimes that’ll be in the foster owner's home.</p>
+
+                   <br> <h3>Fill out the adoption application.</h3><br>
+
+                    <p>Each organization has different requirements you’ll need to meet to adopt a pet. Depending on the organization you work with, the adoption application might be a straightforward questionnaire or a more in-depth process that includes a home visit. You may need to provide references, including from a veterinarian if you have one, so have those ready before you find the pet you want to adopt. Getting your application in quickly helps put you at the front of the line.
+                        <br> <br>Providing the shelter or rescue with an honest and complete pre-adoption questionnaire and application will ensure that they can give you the best counseling on a certain cat or dog’s history, behavior, and needs. They’ll be able to point you in the right direction in choosing which dog or cat to adopt.
+                    </p>
+
+                  <br>  <h3>Be ready for a “meet-and-greet.”</h3><br>
+                    
+                    <p>When you go to the shelter, make sure everyone who lives in your home is able to go with you. Adoption organizations will have the whole family meet with the pet for a few reasons:</p>
+
+                    <ul>
+                        <li>Making sure everyone is on board with adopting a new dog or cat, and understands the responsibility of caring for a pet</li>
+                        <li>Ensures the cat or dog is comfortable with all the people they will be sharing a home with, and vice versa. This is especially important if there are children in the home.</li>
+                        <li>If you already own a dog, the shelter and rescue staff will guide you through a meet-and-greet between your existing dog and the dog you want to adopt. The last thing they want is to adopt out a dog that makes a current household dog uncomfortable or creates a stressful environment that might result in the return of a dog to the shelter.</li>
+                    </ul>
+
+                 <br>   <h3>Take Your New Pet Home</h3><br>
+
+                    <p>If the meet-and-greet goes well with the pet and you’re ready to adopt your new furry family member, you’ll need to pay the adoption fee before taking them home. Adoption fees vary between organizations and help to cover the shelter or rescue’s cost of transportation, housing, and veterinary care that they have provided. You might find lower adoption fees for senior pets or those with special needs, as organizations want to encourage the adoption of these animals in need. Learn more about the costs of adopting a pet.
+                        <br><br>
+                        Remember, no matter how high or low an adoption fee, adopting a new dog or cat will include future costs, such as pet-proofing your home, basic supplies, veterinary care, training, and any grooming needed.
+                        <br><br>
+                        Knowing the basics of how to adopt a cat or dog will help you be prepared for the pet adoption process, making it less stressful for you and your family. Providing a loving home for a pet in need is a wonderful experience and one that you and your family should be applauded for!</p>
+
+    </div>
+
+    <br>
+    <footer class="site-footer">
+        <div class="footer">
+          <div class="container34">
+            <div class="row34">
+              <div class="col-md-8 col-sm-6 col-xs-12">
+                <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved
+                </p><br>
+              </div>
+              <div class="col-md-4 col-sm-6 col-xs-12">
+                <ul class="social-icons">
+                  <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                  <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                  <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <script src="https://kit.fontawesome.com/b6531956e9.js" crossorigin="anonymous"></script>     
+<script src="loginsign.js"></script>
+</body>
+</html>

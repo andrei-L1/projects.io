@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+
+    <link rel="stylesheet" href="navigation.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="modall.css">
+    <link rel="stylesheet" href="aboutus.css">
+
+</head>
+<body>
+    <div class="navigation">
+        <div class="navv-container">
+            <nav>
+                <ul class="menu">
+                    <a class="brand" href="index.html"><h1>AdoptMe</h1></a>
+                    <img src="photos/logo1.jpg">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                    <div class="dropdown">
+                        <button class="dropbtn"><li><a href="about.html">Pets</a></li></button>
+                        <div class="dropdown-content">
+                          <a href="dogs.html">Dogs</a>
+                          <a href="cats.html">Cats</a>
+                          <a href="tagline.html">Other Animals</a>
+                          <a href="history.html">Shelter</a>
+                        </div>
+                      </div>
+                      <li><a href="aboutus.html">About us</a></li>
+                </ul>
+                <ul class="rightmenu">
+                    <li id="signinButton"><a href="#" onclick="opensignup(); updateButtonsAfterLogin();">Sign In</a></li>
+                    <li id="profileButton" style="display: none;"><a href="#" onclick="event.preventDefault(); window.location.href='profile.html';">Profile</a></li>
+                    <li class="vertical-line"></li>
+                    <li id="signupButton"><a href="createjob.html" onclick="openSignupModal()">Sign Up</a></li>
+                    <li id="logoutButton" style="display: none;"><a href="#" onclick="logout()">Logout</a></li>
+                </ul>                                                       
+            </nav>
+        </div>
+    </div>
+
+            <!-- Modal for Sign-in and Sign-up -->
+            <div id="myModal" class="modal">
+              <div class="modal-content">
+                  <!-- Your modal content -->
+                  <span class="close" onclick="closeModal()">&times;</span>
+                  <h2>Welcome to Adopt Me!</h2>
+                  <!-- Sign-in form -->
+                  <form id="loginForm" onsubmit="submitLoginForm(event)">
+                      <input type="text" id="username" placeholder="Username or Email" required>
+                      <input type="password" id="password" placeholder="Password" required>
+                      <button type="submit">Login</button>
+                      <p>Don't have an account? <a href="#" onclick="toggleForm()">Sign Up</a></p>
+                  </form>
+                  
+                  <!-- Sign-up form (initially hidden) -->
+                  <form id="signupForm" class="signup" style="display: none;" onsubmit="submitSignupForm(event)">
+                      <input type="text" id="newUsername" placeholder="Username" required>
+                      <input type="email" id="newEmail" placeholder="Email" required>
+                      <input type="password" id="newPassword" placeholder="Password" required>
+                      <button type="submit">Sign Up</button>
+                      <p>Already have an account? <a href="#" onclick="toggleForm()">Login</a></p>
+                  </form>                
+              </div>
+          </div>
+
+    <div class="parent">
+        <h1>Adopt Me</h1> <br> <br>
+        <h2>Where Every Paw Finds a new loving home!</h2>
+        <div class="container">
+          <div class="right">
+            <img src="photos/5476693.jpg" alt="pet">
+          </div>
+          <div class="left">
+            <p>Welcome to Adopt Me Shelter, where every paw finds a loving home! Our shelter is dedicated to providing a safe and caring environment for animals in need. <br> <br>
+               With the help of our dedicated staff and volunteers, we work tirelessly to find forever homes for each furry friend that comes through our doors.<br> <br>
+               Whether you're looking to adopt a new pet or simply want to support our cause, we invite you to join us in making a difference in the lives of animals in need. Together, we can ensure that every paw finds the love and care they deserve.</p>
+          </div>
+      </div>
+      <div class="givee"> <h2>Give a Paw Up, Donate for Our Pets' Future!</h2></div>
+      <div class="container">
+        <div class="right">
+          <p>Our shelter, Adopt Me Shelter, operates as a non-profit organization dedicated to the well-being of animals in need. <br> <br>
+             Your donation plays a crucial role in our ability to provide medical care, food, shelter, and love to these animals as we strive to find them forever homes. We understand that not everyone can contribute, <br> <br>
+            Your kindness and generosity make our mission possible, and we are deeply grateful for your consideration and support.</p>
+            <a href="#"><button>Donate now</button></a>
+        </div>
+        <div class="left">
+          <img src="photos/5496070.jpg" alt="pet">
+        </div>
+    </div>
+    </div>
+
+
+
+            <br> <hr>
+        <footer class="site-footer">
+            <div class="footer">
+              <div class="container34">
+                <div class="row34">
+                  <div class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved
+                    </p><br>
+                  </div>
+                  <div class="col-md-4 col-sm-6 col-xs-12">
+                    <ul class="social-icons">
+                      <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                      <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                      <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                      <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </footer>
+<script src="https://kit.fontawesome.com/b6531956e9.js" crossorigin="anonymous"></script>     
+<script src="loginsign.js"></script>
+</body>
+</html>
