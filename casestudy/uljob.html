@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fill up Form</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="modal.css">
+    <link rel="stylesheet" href="dropdown.css">
+    <link rel="stylesheet" href="bar.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Indeed+Sans&display=swap">
+
+</head>
+<body>
+    <div id="loginRequiredContent"></div>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul class="menu">
+                    <a class="brand" href="index.html"><h1>CareerCore</h1></a>
+                    <img src="logo.png">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                    <div class="dropdown">
+                      <button class="dropbtn"><li><a href="about.html">About us</a></li></button>
+                      <div class="dropdown-content">
+                        <a href="mission.html">Mission</a>
+                        <a href="vision.html">Vision</a>
+                        <a href="tagline.html">Tagline</a>
+                        <a href="history.html">History</a>
+                      </div>
+                    </div>
+                </ul>
+                <ul id="signInMenu">
+                  <button class="Btnnn" id="logOutBtn">
+                    <div class="sign">
+                      <svg viewBox="0 0 512 512">
+                        <path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 
+                        406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 
+                        32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 
+                        14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0
+                         32 14.3 32 32s-14.3 32-32 32z"></path>
+                      </svg>
+                    </div>
+                    <div class="text">Logout</div>
+                  </button>
+                  <li><a id="signInLink" href="login.html">Sign In</a></li>
+                  <li id="profileLi" style="display: none;"><a href="profile.html">Profile</a></li>
+                  <li class="vertical-line"></li>
+                  <li><a href="createjob.html">Post Job</a></li>
+                </ul>
+            </nav> 
+        </div> 
+    </div>
+    <div class="toptt-container">
+        <div class="toptt">
+            <h1>Craft and Share a Career <br>Opportunity</h1>
+         </div>
+         <img src="—Pngtree—flat design concept of programmers_5870919.png" alt="">
+    </div>
+    <div class="pott">
+        <div class="cntnr">  
+            <h1 class="fill">Share your job posting effortlessly in 4 simple steps,<br>get started now!</h1>
+            <br><br>            
+            <div class="progress-container"> 
+                <ul id="progressbar"> 
+                    <li class="active" 
+                        id="step1"> 
+                        <strong>Step 1</strong> 
+                    </li> 
+                    <li id="step2"> 
+                          <strong>Step 2</strong> 
+                      </li> 
+                    <li id="step3"> 
+                          <strong>Step 3</strong> 
+                      </li> 
+                    <li id="step4"> 
+                          <strong>Step 4</strong> 
+                      </li> 
+                </ul> 
+                <div class="progress"> 
+                    <div class="progress-bar"></div> 
+                </div> 
+            </div> 
+            <div class="step-container"> 
+            <form method="post">
+                <fieldset>
+                    <h1 class="basic">Basic Information</h1>
+                    <div class="content">
+                        <label for="jobname">Company name</label>
+                        <input type="text" name="jobname" id="jobname" class="detials"><br>
+                        <label for="jobtitle">Job Title</label>
+                        <input type="text" name="jobtitle" id="jobtitle" class="detials"><br>
+                        <label for="jobloc">Location</label>
+                        <input type="text" name="jobloc" id="jobloc" class="detials"><br>
+                        <label for="jobtyp">Jobtype</label>
+                        <select name="jobtyp" id="jobtyp" class="details">
+                            <option value="" disabled selected>Select a job type</option>
+                            <option value="option1">Full time</option>
+                            <option value="option2">Part time</option>
+                        </select><br>
+                        <label for="jobsal">Salary</label>
+                        <input type="text" name="jobsal" id="jobsal" class="detials"><br>
+                        <label for="jobshi">Shift</label>
+                        <input type="text" name="jobshi" id="jobshi" class="detials"><br>
+                    </div> 
+                    <input type="button"
+                           name="next-step"
+                           class="next-step"
+                           value="Next Step" /> 
+                </fieldset> 
+                <fieldset> 
+                    <h1 class="basic">Job Description</h1> 
+                    <div class="content">
+                        <label for="jobove">Company Overview</label>
+                        <input type="text" name="jobove" id="jobove" class="detials"><br>
+                        <label for="jobbio">Short bio</label>
+                        <input type="text" name="jobbio" id="jobbio" class="detials"><br>
+                        <label for="jobpo">Position offered</label>
+                        <input type="text" name="jobbio" id="jobbio" class="detials"><br>
+                        <label for="jobhi">Job highlights</label>
+                        <input type="text" name="jobhi" id="jobhi" class="detials"><br>
+                        <label for="jobovepos">Job Overview</label>
+                        <input type="text" name="jobovepos" id="jobovepos" class="detials"><br>
+                        <label for="jobsched">Schedule</label>
+                        <input type="text" name="jobsched" id="jobsched" class="detials"><br>
+                    </div>
+                    <input type="button"
+                           name="next-step" 
+                           class="next-step" 
+                           value="Next Step" /> 
+                    <input type="button"
+                           name="previous-step" 
+                           class="previous-step" 
+                           value="Previous Step" /> 
+                </fieldset> 
+                <fieldset> 
+                    <h1 class="basic">About</h1>
+                    <div class="content">
+                        <label for="jobresp">Responsibilities</label>
+                        <input type="text" name="jobresp" id="jobresp" class="detials"><br>
+                        <label for="jobqua">Qualifications</label>
+                        <input type="text" name="jobqua" id="jobqua" class="detials"><br>
+                        <label for="jobreq">Requirements</label>
+                        <input type="text" name="jobreq" id="jobreq" class="detials"><br>
+                        <label for="jobbeni">Company Benefits</label>
+                        <input type="text" name="jobbeni" id="jobbeni" class="detials"><br>
+                        <label for="jobbe">Benifits</label>
+                        <input type="text" name="jobbe" id="jobbe" class="detials"><br>
+                        <label for="jobhow">How to Apply</label>
+                        <input type="text" name="jobhow" id="jobhow" class="detials"><br>
+
+                    </div>
+                    <input type="button" 
+                           name="next-step" 
+                           class="next-step" 
+                           value="Final Step" /> 
+                    <input type="button" 
+                           name="previous-step" 
+                           class="previous-step" 
+                           value="Previous Step" /> 
+                </fieldset> 
+                <fieldset> 
+                    <h1 class="basic">Additional Information</h1>
+                    <div class="content">
+                        <label for="appDeadline">Application Deadline</label>
+                        <input type="text" name="appDeadline" id="appDeadline" class="detials" placeholder="MM/DD/YYYY"><br>
+                        <label for="interviewDateTime">Interview Date/Time</label>
+                        <input type="text" name="interviewDateTime" id="interviewDateTime" class="detials" placeholder="MM/DD/YYYY hh:mm AM/PM"><br>
+                        <label for="refCode">Reference Code</label>
+                        <input type="text" name="refCode" id="refCode" class="detials"><br>
+                        <label for="additionalInstructions">Additional Instructions</label>
+                        <textarea name="additionalInstructions" id="additionalInstructions" class="detials1" rows="4"></textarea><br>
+                        <label for="howDidYouHear">How did you hear about the job?</label>
+                        <input type="text" name="howDidYouHear" id="howDidYouHear" class="detials"><br>
+                    </div>
+                    <input type="submit" 
+                           name="next-step" 
+                           class="next-step" 
+                           value="Submit Form"
+                           onclick="alertt()" />
+                    <input type="button" 
+                           name="previous-step" 
+                           class="previous-step"
+                           value="Previous Step" /> 
+                </fieldset> 
+            </form>
+            </div> 
+        </div> 
+    </div>
+
+    <hr>
+    <footer class="site-footer">
+    <div class="footer">
+        <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved
+            </p><br>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+                <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+            </ul>
+            </div>
+        </div>
+        </div>
+    </div>
+    </footer>
+      
+    <script src="https://kit.fontawesome.com/b6531956e9.js" crossorigin="anonymous"></script>
+    <script src="main.js"> </script>
+    <script>
+        function alertt(){
+            alert('Your entry has been submitted successfully.');
+        }
+        document.addEventListener("DOMContentLoaded", function () { 
+    const progressListItems =  
+        document.querySelectorAll("#progressbar li"); 
+    const progressBar = 
+        document.querySelector(".progress-bar"); 
+    let currentStep = 0; 
+  
+    function updateProgress() { 
+        const percent =  
+            (currentStep / (progressListItems.length - 1)) * 100; 
+        progressBar.style.width = percent + "%"; 
+  
+        progressListItems.forEach((item, index) => { 
+            if (index === currentStep) { 
+                item.classList.add("active"); 
+            } else { 
+                item.classList.remove("active"); 
+            } 
+        }); 
+    } 
+  
+    function showStep(stepIndex) { 
+        const steps = 
+            document.querySelectorAll(".step-container fieldset"); 
+        steps.forEach((step, index) => { 
+            if (index === stepIndex) { 
+                step.style.display = "block"; 
+            } else { 
+                step.style.display = "none"; 
+            } 
+        }); 
+    } 
+  
+    function nextStep() { 
+        if (currentStep < progressListItems.length - 1) { 
+            currentStep++; 
+            showStep(currentStep); 
+            updateProgress(); 
+        } 
+    } 
+  
+    function prevStep() { 
+        if (currentStep > 0) { 
+            currentStep--; 
+            showStep(currentStep); 
+            updateProgress(); 
+        } 
+    } 
+  
+    const nextStepButtons =  
+        document.querySelectorAll(".next-step"); 
+    const prevStepButtons =  
+        document.querySelectorAll(".previous-step"); 
+  
+    nextStepButtons.forEach((button) => { 
+        button.addEventListener("click", nextStep); 
+    }); 
+  
+    prevStepButtons.forEach((button) => { 
+        button.addEventListener("click", prevStep); 
+    }); 
+});
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Information System</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="cards.css">
+    <link rel="stylesheet" href="content2.css">
+    <link rel="stylesheet" href="modal.css">
+    <link rel="stylesheet" href="dropdown.css">
+</head>
+<body>
+  <div id="guestContent">
+  <div id="header">
+    <div class="container">
+        <nav>
+            <ul class="menu">
+                <a class="brand" href="index.html"><h1>CareerCore</h1></a>
+                <img src="logo.png">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+                <div class="dropdown">
+                  <button class="dropbtn"><li><a href="about.html">About us</a></li></button>
+                  <div class="dropdown-content">
+                    <a href="mission.html">Mission</a>
+                    <a href="vision.html">Vision</a>
+                    <a href="tagline.html">Tagline</a>
+                    <a href="history.html">History</a>
+                  </div>
+                </div>
+            </ul>
+            <ul id="signInMenu">
+              <button class="Btnnn" id="logOutBtn">
+                <div class="sign">
+                  <svg viewBox="0 0 512 512">
+                    <path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 
+                    406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 
+                    32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 
+                    14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0
+                     32 14.3 32 32s-14.3 32-32 32z"></path>
+                  </svg>
+                </div>
+                <div class="text">Logout</div>
+              </button>
+              <li><a id="signInLink" href="login.html">Sign In</a></li>
+              <li id="profileLi" style="display: none;"><a href="profile.html">Profile</a></li>
+              <li class="vertical-line"></li>
+              <li><a href="createjob.html">Post Job</a></li>
+            </ul>
+        </nav> 
+    </div> 
+  </div>
+
+  <form class="form">
+    <!-- Search Section -->
+    <div class="search-section">
+        <label for="search">
+            <input required="" autocomplete="off" placeholder="Search for Jobs" id="search" type="text">
+            <div class="icon">
+                <svg stroke-width="2" stroke="currentColor" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="swap-on">
+                    <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linejoin="round" stroke-linecap="round"></path>
+                </svg>
+                <svg stroke-width="2" stroke="currentColor" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="swap-off">
+                    <path d="M10 19l-7-7m0 0l7-7m-7 7h18" stroke-linejoin="round" stroke-linecap="round"></path>
+                </svg>
+            </div>
+            <button type="reset" class="close-btn">
+                <svg viewBox="0 0 20 20" class="h-5 w-5" xmlns="http://www.w3.org/2000/svg">
+                    <path clip-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" fill-rule="evenodd"></path>
+                </svg>
+            </button>
+        </label>
+    </div>
+    <div class="location-section">
+      <label for="location">
+          <i class="fas fa-map-marker-alt icon"></i>
+          <select id="location" required="" length="5">
+                <option value="location1" disabled selected>Location</option>
+                <option value="manila">Manila</option>
+                <option value="cebu">Cebu</option>
+                <option value="davao">Davao</option>
+                <option value="quezon">Quezon City</option>
+                <option value="makati">Makati</option>
+                <option value="baguio">Baguio</option>
+                <option value="iloilo">Iloilo</option>
+                <option value="cagayan">Cagayan de Oro</option>
+                <option value="pampanga">Pampanga</option>
+                <option value="zamboanga">Zamboanga</option>
+                <option value="iloilo">Iloilo</option>
+                <option value="bacolod">Bacolod</option>
+                <option value="tagaytay">Tagaytay</option>
+                <option value="subic">Subic</option>
+                <option value="antipolo">Antipolo</option>
+                <option value="batangas">Batangas</option>
+                <option value="cavite">Cavite</option>
+                <option value="laoag">Laoag</option>
+                <option value="naga">Naga</option>
+                <option value="tagbilaran">Tagbilaran</option>
+            </select>
+          </select>
+      </label>
+  </div>
+
+   <button id="src" type="submit">Find Jobs</button>
+  </form>
+  <hr>
+  
+  <div class="mainbody">
+    <!-- left div, where the cards are displayed -->
+    <div class="content1">
+      <div class="card-container">
+        <div class="card" id="card1">
+          <div class="cookie-carda">
+            <div class="plan">
+              <div class="inner">
+                <span class="pricing">
+                  <span>
+                  PHP 40 - 50k <small>/ m</small>
+                  </span>
+                </span>
+                <p class="title">Senior Sales Representative</p>
+                <p class="info">Crertih Inc is currently looking for sales representatives to join our pioneering team in Davao City. </p>
+                <ul class="features">
+                  <li>
+                    <span class="icon">
+                      <svg  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path fill="currentColor" d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
+                      </svg>
+                    </span>
+                    <span><strong>WORK</strong> ONSITE IN DAVAO CITY</span>
+                  </li>
+                  <li>
+                    <span class="icon">
+                      <svg  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path fill="currentColor" d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
+                      </svg>
+                    </span>
+                    <span>Location: Six Eleven, Mabini, Davao City </span>
+                  </li>
+                  <li>
+                    <span class="icon">
+                      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path fill="currentColor" d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
+                      </svg>
+                    </span>
+                    <span>Interview via phone/google meet</span>
+                  </li>
+                </ul>
+                <div class="bottt">
+                  <p class="small-text">
+                    <ion-icon class="bottt1" name="paper-plane-outline"></ion-icon> Easily apply
+                    <ion-icon class="bottt1" name="time-outline"></ion-icon> Urgent Hiring
+                  </p>                
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ........................................................ -->
+        <div class="card" id="card2">
+          <div class="cookie-carda">
+            <div class="plan">
+              <div class="inner">
+                <span class="pricing">
+                  <span>
+                  PHP 45k <small>/ m</small>
+                  </span>
+                </span>
+                <p class="title">Outbound Sales Representative</p>
+                <p class="info">Pitching the product or service to potential customers and answering any questions they may have </p>
+                <ul class="features">
+                  <li>
+                    <span class="icon">
+                      <svg  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path fill="currentColor" d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
+                      </svg>
+                    </span>
+                    <span><strong>Reports To:</strong> Partner, Partner Advisor</span>
+                  </li>
+                  <li>
+                    <span class="icon">
+                      <svg  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path fill="currentColor" d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
+                      </svg>
+                    </span>
+                    <span>Schedule: 9:00 PM to 6:00 AM PHT <strong> </strong></span>
+                  </li>
+                  <li>
+                    <span class="icon">
+                      <svg  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path fill="currentColor" d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
+                      </svg>
+                    </span>
+                    <span>Negotiate and close deals as necessary</span>
+                  </li>
+                </ul>
+                <div class="bottt">
+                  <p class="small-text">
+                    <ion-icon class="bottt1" name="paper-plane-outline"></ion-icon> Easily apply
+                    <ion-icon class="bottt1" name="time-outline"></ion-icon> Urgent Hiring
+                  </p>                
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ........................................................ -->
+        <div class="card" id="card3">
+          <div class="cookie-carda">
+            <div class="plan">
+              <div class="inner">
+                <span class="pricing">
+                  <span>
+                  PHP 24 - 80k <small>/ m</small>
+                  </span>
+                </span>
+                <p class="title">Sales Executive</p>
+                <p class="info">Luce Maintenance Group Pte Ltd
+                  Muntinlupa </p>
+                <ul class="features">
+                  <li>
+                    <span class="icon">
+                      <svg  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path fill="currentColor" d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
+                      </svg>
+                    </span>
+                    <span><strong>Must possess</strong> a College Degree.</span>
+                  </li>
+                  <li>
+                    <span class="icon">
+                      <svg  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path fill="currentColor" d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
+                      </svg>
+                    </span>
+                    <span>facilities management based in Singapore <strong> </strong></span>
+                  </li>
+                  <li>
+                    <span class="icon">
+                      <svg  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path fill="currentColor" d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
+                      </svg>
+                    </span>
+                    <span>Competitive pay</span>
+                  </li>
+                </ul>
+                <div class="bottt">
+                  <p class="small-text">
+                    <ion-icon class="bottt1" name="paper-plane-outline"></ion-icon> Easily apply
+                    <ion-icon class="bottt1" name="flash"></ion-icon> Responsive employer
+                  </p>                
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ........................................................ -->
+        <div class="card" id="card4">
+          <div class="cookie-carda">
+            <div class="plan">
+              <div class="inner">
+                <span class="pricing">
+                  <span>
+                  PHP 17 - 19k <small>/ m</small>
+                  </span>
+                </span>
+                <p class="title">Food Preparer</p>
+                <p class="info">ZXY Ecommerce Platform and Consultancy Inc. </p>
+                <ul class="features">
+                  <li>
+                    <span class="icon">
+                      <svg  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path fill="currentColor" d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
+                      </svg>
+                    </span>
+                    <span><strong></strong>Quality of the vegetables is maintained</span>
+                  </li>
+                  <li>
+                    <span class="icon">
+                      <svg  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path fill="currentColor" d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
+                      </svg>
+                    </span>
+                    <span>Coordinate with other kitchen staff <strong> </strong></span>
+                  </li>
+                  <li>
+                    <span class="icon">
+                      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path fill="currentColor" d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
+                      </svg>
+                    </span>
+                    <span>With good communication skills</span>
+                  </li>
+                </ul>
+                <div class="bottt">
+                  <p class="small-text">
+                    <ion-icon class="bottt1" name="paper-plane-outline"></ion-icon> Easily apply
+                  </p>                
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ........................................................ -->
+        <div class="card" id="card5">
+          <div class="cookie-carda">
+            <div class="plan">
+              <div class="inner">
+                <span class="pricing">
+                  <span>
+                  PHP 15 - 20k <small>/ m</small>
+                  </span>
+                </span>
+                <p class="title">Account Executive</p>
+                <p class="info">ADECS International Corporation </p>
+                <ul class="features">
+                  <li>
+                    <span class="icon">
+                      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path fill="currentColor" d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
+                      </svg>
+                    </span>
+                    <span><strong></strong> Opening and acquiring of new accounts</span>
+                  </li>
+                  <li>
+                    <span class="icon">
+                      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path fill="currentColor" d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
+                      </svg>
+                    </span>
+                    <span>Knowledge in MS Office <strong> </strong></span>
+                  </li>
+                  <li>
+                    <span class="icon">
+                      <svg  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path fill="currentColor" d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
+                      </svg>
+                    </span>
+                    <span>People and service-oriented</span>
+                  </li>
+                </ul>
+                <div class="bottt">
+                  <p class="small-text">
+                    <ion-icon class="bottt1" name="paper-plane-outline"></ion-icon> Easily apply
+                    <ion-icon class="bottt1" name="time-outline"></ion-icon> Urgent Hiring
+                  </p>                
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- right div where the job description is deisplayed -->
+    <div class="content2">
+        <!-- top contents of the div in the right ore content2 -->
+        <div class="topcontent">
+          <div id="card1-content" class="card-content">
+            <h2>Senior Sales Representative</h2>
+            <p>Rapid Hires</p>
+            <p>Manila</p>
+            <p>PHP 40,000 - PHP 50,000 a month</p>
+            <p>
+                <span id="flash"><ion-icon name="flash"></ion-icon></span>
+                Responded to 51-74% of applications in the past 30 days, typically within 4 days.
+            </p>
+            <div>
+                  <!-- Trigger button -->
+                <a href="#" onclick="openModal('modal_1', 'overlay_1')">
+                  <input type="button" name="button" id="btn" value="Apply now">
+                </a>
+
+                <!-- The Modal -->
+                <div class="overlay" id="overlay_1" onclick="closeModal('modal_1', 'overlay_1')"></div>
+                <div class="modal" id="modal_1">
+                    <span class="close" onclick="closeModal('modal_1', 'overlay_1')">&times;</span>
+
+                    <div class="container123">
+                      <div class="card222">
+                        <h3>Upload Files</h3>
+                        <div class="drop_box222_1">
+                          <header>
+                            <h4>Select File here</h4>
+                          </header>
+                          <p>Files Supported: PDF, TEXT, DOC , DOCX</p>
+                          <input type="file" hidden accept=".doc,.docx,.pdf" id="fileID" style="display:none;">
+                          <button class="btn111">Choose File</button>
+                        </div>
+                      </div>
+                    </div>
+                  
+
+                </div>
+                  <span id="bookmark"><ion-icon name="bookmark-outline"></ion-icon></span>
+            </div>
+          </div>
+
+
+          <!-- ........................................................ -->
+          <div id="card2-content" class="card-content">
+              <h2>Outbound Sales Representative</h2>
+              <p>Rapid Hires</p>
+              <p>Angeles</p>
+              <p>PHP 45,000 a month</p>
+              <p>Negotiate and close deals as necessary, Leverage and improve best practices to create new opportunities</p>
+              <div>
+                <a href="#">
+                  <input type="button" name="button" id="btn" value="Apply now" onclick="openModal('modal_2', 'overlay_2')">
+                </a>   
+                <div class="overlay" id="overlay_2" onclick="closeModal('modal_2', 'overlay_2')"></div>
+                <div class="modal" id="modal_2">
+                    <span class="close" onclick="closeModal('modal_2', 'overlay_2')">&times;</span>
+
+                    <div class="container123">
+                      <div class="card222">
+                        <h3>Upload Files</h3>
+                        <div class="drop_box222_2">
+                          <header>
+                            <h4>Select File here</h4>
+                          </header>
+                          <p>Files Supported: PDF, TEXT, DOC , DOCX</p>
+                          <input type="file" hidden accept=".doc,.docx,.pdf" id="fileID" style="display:none;">
+                          <button class="btn111">Choose File</button>
+                        </div>
+                      </div>
+                    </div>
+
+                </div>      
+                <span id="bookmark"><ion-icon name="bookmark-outline"></ion-icon></span>
+              </div>
+          </div>
+
+          <!-- ........................................................ -->
+          <div id="card3-content" class="card-content">
+            <h2>Sales Executive</h2>
+            <p>Luce Maintenance Group Pte Ltd</p>
+            <p>Muntinlupa • Remote</p>
+            <p>PHP 24,000 - PHP 80,000 a month</p>
+            <p>
+                <span id="flash"><ion-icon name="flash"></ion-icon></span>
+                Responded to 51-74% of applications in the past 30 days, typically within 3 days.
+            </p>
+            <div>
+              <a href="#">
+                <input type="button" name="button" id="btn" value="Apply now" onclick="openModal('modal_3', 'overlay_3')">
+              </a>   
+              <div class="overlay" id="overlay_3" onclick="closeModal('modal_3', 'overlay_3')"></div>
+              <div class="modal" id="modal_3">
+                  <span class="close" onclick="closeModal('modal_3', 'overlay_3')">&times;</span>
+
+                  <div class="container123">
+                    <div class="card222">
+                      <h3>Upload Files</h3>
+                      <div class="drop_box222_3">
+                        <header>
+                          <h4>Select File here</h4>
+                        </header>
+                        <p>Files Supported: PDF, TEXT, DOC , DOCX</p>
+                        <input type="file" hidden accept=".doc,.docx,.pdf" id="fileID" style="display:none;">
+                        <button class="btn111">Choose File</button>
+                      </div>
+                    </div>
+                  </div>
+
+              </div>         
+              <span id="bookmark"><ion-icon name="bookmark-outline"></ion-icon></span>
+            </div>
+          </div>
+
+          <!-- ........................................................ -->
+          <div id="card4-content" class="card-content">
+            <h2>Food Preparer</h2>
+            <p>ZXY Ecommerce Platform and Consultancy Inc.</p>
+            <p>Malate</p>
+            <p>PHP 17,000 - PHP 19,000 a month</p>
+            <p>
+              Requires 2 years or more of experience in fresh food markets and restaurant kitchen preparation
+            </p>
+            <div>
+              <a href="#">
+                <input type="button" name="button" id="btn" value="Apply now" onclick="openModal('modal_4', 'overlay_4')">
+              </a>   
+              <div class="overlay" id="overlay_4" onclick="closeModal('modal_4', 'overlay_4')"></div>
+              <div class="modal" id="modal_4">
+                  <span class="close" onclick="closeModal('modal_4', 'overlay_4')">&times;</span>
+
+                  <div class="container123">
+                    <div class="card222">
+                      <h3>Upload Files</h3>
+                      <div class="drop_box222_4">
+                        <header>
+                          <h4>Select File here</h4>
+                        </header>
+                        <p>Files Supported: PDF, TEXT, DOC , DOCX</p>
+                        <input type="file" hidden accept=".doc,.docx,.pdf" id="fileID" style="display:none;">
+                        <button class="btn111">Choose File</button>
+                      </div>
+                    </div>
+                  </div>
+
+              </div>           
+              <span id="bookmark"><ion-icon name="bookmark-outline"></ion-icon></span>
+            </div>
+          </div>
+
+          <!-- ........................................................ -->
+          <div id="card5-content" class="card-content">
+            <h2>Account Executive</h2>
+            <p>Rapid Hires</p>
+            <p>ADECS International Corporation</p>
+            <p>Quezon City</p>
+            <p>PHP 15,000 - PHP 20,000 a month</p>
+            <p>
+              Provide market feedback to the team to assist in product/service development.
+            </p>
+            <div>
+              <a href="#">
+                <input type="button" name="button" id="btn" value="Apply now" onclick="openModal('modal_5', 'overlay_5')">
+              </a>   
+              <div class="overlay" id="overlay_5" onclick="closeModal('modal_5', 'overlay_5')"></div>
+              <div class="modal" id="modal_5">
+                  <span class="close" onclick="closeModal('modal_5', 'overlay_5')">&times;</span>
+
+                  <div class="container123">
+                    <div class="card222">
+                      <h3>Upload Files</h3>
+                      <div class="drop_box222_5">
+                        <header>
+                          <h4>Select File here</h4>
+                        </header>
+                        <p>Files Supported: PDF, TEXT, DOC , DOCX</p>
+                        <input type="file" hidden accept=".doc,.docx,.pdf" id="fileID" style="display:none;">
+                        <button class="btn111">Choose File</button>
+                      </div>
+                    </div>
+                  </div>
+
+              </div>              
+              <span id="bookmark"><ion-icon name="bookmark-outline"></ion-icon></span>
+            </div>
+          </div>
+        </div> 
+        
+
+        <!-- Bottom contents of the div in the right or content2 -->
+        <div class="bottomcontent">
+          <div id="bottom-card1-content" class="card-content">
+              <div class="job-details">
+                  <h2>Job details</h2>
+                  <p>
+                      <span><ion-icon name="cash-outline"></ion-icon></span>
+                      Pay <br>
+                      <a>PHP 40,000 - PHP 50,000 a month</a>
+                  </p>
+                  <p>
+                      <span><ion-icon name="briefcase-outline"></ion-icon></span>
+                      Job type <br>
+                      <a>Full-time</a>
+                  </p>
+                  <p>
+                      <span><ion-icon name="time-outline"></ion-icon></span>
+                      Shift and schedule <br>
+                      <a>8-hour shift</a><a>Evening shift</a>
+                  </p>
+              </div>
+          <hr>
+          <div class="jobdescpt">
+              <p><strong>Full job description</strong></p>
+              <p><strong>MASSIVE HIRING!! WORK ONSITE IN DAVAO CITY</strong></p>
+              <p><strong>Location:</strong> Six Eleven, Mabini, Davao City - (NO WALK-INS)</p>
+              <p><strong>Interview via phone/google meet</strong></p>
+              <p><strong>Position:</strong> Senior Sales Representative</p>
+              <p><strong>Hiring! URGENTLY NEEDED!!! LOCATED IN DAVAO CITY</strong></p>
+              <p><strong>Crertih Inc</strong> is currently looking for sales representatives to join our pioneering team in Davao City. Their responsibilities include:</p>
+              <ul>
+                  <li>Reach out to local businesses, ranging from retail stores to sales positions, and have them subscribe to the platform</li>
+                  <li>Make sure to close out subscription orders to the platform and hit and exceed sales targets in line with the SOP</li>
+                  <li>Cultivate customer relationships with clients ranging from managers, directors, owners, and CEO</li>
+              </ul>
+              <p><strong>Qualifications:</strong></p>
+              <ul>
+                  <li>self-starter</li>
+                  <li>driven, goal-oriented, and eager to speak with prospective clients</li>
+                  <li>proficient in English</li>
+                  <li>at least 1 year sales experience in a BPO setting (inbound/outbound or any hard selling account - not just upselling), cold calling, or telemarketing</li>
+                  <li>With good sales pitch and approach</li>
+                  <li>Experience in selling to large companies</li>
+                  <li>With sales experience in the recruitment industry</li>
+                  <li>Preferably with experience studying or working in US, Europe, and other foreign countries</li>
+              </ul>
+              <p><strong>What we offer:</strong></p>
+              <ul>
+                  <li>Competitive Package - Php 40,000-50,000 + Commissions</li>
+                  <li>Opportunities for growth</li>
+                  <li>We Offer a one-time relocation package of Php20,000</li>
+              </ul>
+              <p><strong>Send your resume/CV to google drive:</strong></p>
+              <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSd_5_HMzksCgF83R9Z5Wk1YoPnD7yMIhIJLzC4aFGn3stN1Qw/viewform?usp=sf_link" target="_blank">Google Drive Application Form</a></p>
+              <p>or email me at <a href="mailto:j.rapidhires@gmail.com">j.rapidhires@gmail.com</a></p>
+              <p><strong>Email subject:</strong> Senior Sales Representative - Indeed</p>
+              <p><strong>Job Type:</strong> Full-time</p>
+              <p><strong>Salary:</strong> Php40,000.00 - Php50,000.00 per month</p>
+              <p><strong>Schedule:</strong></p>
+              <ul>
+                  <li>8-hour shift</li>
+                  <li>Evening shift</li>
+              </ul>
+              <p><strong>Supplemental pay types:</strong></p>
+              <ul>
+                  <li>Bonus pay</li>
+                  <li>Commission pay</li>
+              </ul>
+              <p><strong>Ability to commute/relocate:</strong></p>
+              <p>Davao City: Reliably commute or planning to relocate before starting work (Required)</p>
+              <p><strong>Experience:</strong></p>
+              <ul>
+                  <li>Sales: 1 year (Preferred)</li>
+              </ul>
+              <p><strong>Language:</strong></p>
+              <p>Able to speak English language (Preferred)</p>
+          </div>
+          </div>
+
+          <!-- ........................................................ -->
+          <div id="bottom-card2-content" class="card-content">
+              <div class="job-details">
+                  <h2>Job details</h2>
+                  <p>
+                      <span><ion-icon name="cash-outline"></ion-icon></span>
+                      Pay <br>
+                      <a>PHP 45,000 a month</a>
+                  </p>
+                  <p>
+                      <span><ion-icon name="briefcase-outline"></ion-icon></span>
+                      Job type <br>
+                      <a>Full-time</a>
+                  </p>
+                  <p>
+                      <span><ion-icon name="time-outline"></ion-icon></span>
+                      Shift and schedule <br>
+                      <a>8-hour shift</a>
+                  </p>
+              </div>
+            <hr>
+            <div class="jobdescpt">
+              <p><strong>Full job description</strong></p>
+              <p><strong>Position Title:</strong> Outbound Sales Representative</p>
+              <p><strong>Salary:</strong> Php 45,000.00 per month</p>
+              <p><strong>Reports To:</strong> Partner, Partner Advisor</p>
+              <p><strong>Primary Relationship:</strong> Partner Team</p>
+              <p><strong>Date:</strong> October 2023</p>
+              <p><strong>Schedule:</strong> 9:00 PM to 6:00 AM PHT</p>
+              
+              <p><strong>Responsibilities:</strong></p>
+              <ul>
+                  <li>Pitching the product or service to potential customers and answering any questions they may have</li>
+                  <li>Negotiate and close deals as necessary</li>
+                  <li>Leverage and improve best practices to create new opportunities</li>
+                  <li>Maintain an expert level of comprehensive knowledge of client’s products and services</li>
+                  <li>Create and manage exceptional customer experiences</li>
+                  <li>Provide superior brand representation while maintaining high-quality standards</li>
+                  <li>Create, maintain, and update a database of customers with complete information and emails</li>
+              </ul>
+
+              <p><strong>Qualifications:</strong></p>
+              <ul>
+                  <li>Minimum of 2 years experience in outbound call center sales</li>
+                  <li>College Graduate</li>
+                  <li>Excellent communication, interpersonal, and presentation skills</li>
+                  <li>Networking aptitude</li>
+                  <li>Fearless attitude and a hunter mentality</li>
+              </ul>
+
+              <p><strong>Company Benefits:</strong></p>
+              <ul>
+                  <li>SSS, Philhealth, Pag-Ibig</li>
+                  <li>13th Month Pay</li>
+                  <li>HMO and Life Insurance (AVEGA)</li>
+                  <li>Free Shuttle Service</li>
+                  <li>CO League - Monthly Company Activities</li>
+                  <li>CO Clubs</li>
+                  <li>CO Amenities Swimming Pool, Clinic, and Kids zone</li>
+                  <li>CO Stars - Corporate Social Responsibility Involvement Scholarship Programs</li>
+                  <li>CO Academy - Training and Development Programs</li>
+                  <li>COolture Coach</li>
+                  <li>CO Gears</li>
+                  <li>Cool and Flexible Workplace</li>
+                  <li>Other Performance and Attendance Based Rewards</li>
+                  <li>Bereavement Leave</li>
+                  <li>Paternity Leave</li>
+                  <li>7 days SOLO Parent Leave</li>
+                  <li>Magna Carta Leave</li>
+                  <li>Company Bank Loan</li>
+              </ul>
+
+              <p><strong>Job Type:</strong> Full-time</p>
+              <p><strong>Salary:</strong> Php 45,000.00 per month</p>
+              
+              <p><strong>Benefits:</strong></p>
+              <ul>
+                  <li>Health insurance</li>
+                  <li>Life insurance</li>
+              </ul>
+
+              <p><strong>Schedule:</strong> 8-hour shift</p>
+              <p><strong>Ability to commute/relocate:</strong></p>
+              <p>Angeles, Pampanga: Reliably commute or planning to relocate before starting work (Required)</p>
+            </div>
+          </div>
+
+          <!-- ........................................................ -->
+          <div id="bottom-card3-content" class="card-content">
+              <div class="job-details">
+                  <h2>Job details</h2>
+                  <p>
+                      <span><ion-icon name="cash-outline"></ion-icon></span>
+                      Pay <br>
+                      <a>PHP 24,000 - PHP 80,000 a month</a>
+                  </p>
+                  <p>
+                      <span><ion-icon name="briefcase-outline"></ion-icon></span>
+                      Job type <br>
+                      <a>Full-time</a>
+                  </p>
+                  <p>
+                      <span><ion-icon name="time-outline"></ion-icon></span>
+                      Shift and schedule <br>
+                      <a>8-hour shift</a><a>Monday to Friday</a>
+                  </p>
+              </div>
+            <hr>
+            <div class="jobdescpt">
+              <p><strong>Full job description</strong></p>
+              <p><strong>Position Title:</strong> Sales Executive</p>
+              <p><strong>Salary:</strong> Php 24,000.00 - Php 80,000.00 per month</p>
+              <p><strong>Company:</strong> Luce SG</p>
+              <p><strong>Location:</strong> Muntinlupa City</p>
+              
+              <p><strong>Job Highlights:</strong></p>
+              <ul>
+                  <li>Competitive pay</li>
+                  <li>Constant opportunity for personal growth</li>
+                  <li>Dynamic work</li>
+                  <li>Stable work as part of a high-performing team</li>
+              </ul>
+
+              <p><strong>Company Overview:</strong></p>
+              <p>Luce SG is a tech-powered services provider for residential and commercial needs in Singapore, with services including part-time maid services, home and office cleaning, aircon servicing, and more.</p>
+
+              <p><strong>Responsibilities:</strong></p>
+              <ul>
+                  <li>Understand the needs of clients and recommend services</li>
+                  <li>Follow up with potential clients</li>
+                  <li>Achieve sales targets</li>
+                  <li>Establish and maintain positive customer and business relationships</li>
+                  <li>Collaborate closely with the Singapore Operations team</li>
+              </ul>
+
+              <p><strong>Requirements:</strong></p>
+              <ul>
+                  <li>Bachelor’s/College Degree</li>
+                  <li>At least 1 year of working experience in sales</li>
+                  <li>Located in Alabang, Muntinlupa</li>
+                  <li>Able to work remotely once a week</li>
+                  <li>Highly motivated with excellent communication and interpersonal skills</li>
+              </ul>
+
+              <p><strong>Office Location:</strong> Alabang, Muntinlupa</p>
+
+              <p><strong>Why Should You Apply?</strong></p>
+              <ul>
+                  <li>Above-industry average salary package</li>
+                  <li>Opportunities for skills upgrade</li>
+                  <li>Personalized mentorship and guidance</li>
+                  <li>Part of a dynamic team at a rapidly growing company</li>
+                  <li>13th Month, Performance Bonus, HMO</li>
+              </ul>
+
+              <p><strong>Job Type:</strong> Full-time</p>
+              <p><strong>Salary:</strong> Php 24,000.00 - Php 80,000.00 per month</p>
+
+              <p><strong>Benefits:</strong></p>
+              <ul>
+                  <li>Health insurance</li>
+                  <li>Paid training</li>
+              </ul>
+
+              <p><strong>Schedule:</strong> 8-hour shift, Monday to Friday</p>
+              <p><strong>Ability to commute/relocate:</strong> Muntinlupa City: Reliably commute or planning to relocate before starting work (Required)</p>
+
+              <p><strong>Experience:</strong> Sales: 1 year (Required)</p>
+              <p><strong>Language:</strong> English (Preferred)</p>
+            </div>
+          </div>
+
+          <!-- ........................................................ -->
+          <div id="bottom-card4-content" class="card-content">
+              <div class="job-details">
+                  <h2>Job details</h2>
+                  <p>
+                      <span><ion-icon name="cash-outline"></ion-icon></span>
+                      Pay <br>
+                      <a>PHP 17,000 - PHP 19,000 a month</a>
+                  </p>
+                  <p>
+                      <span><ion-icon name="briefcase-outline"></ion-icon></span>
+                      Job type <br>
+                      <a>Full-time</a>
+                  </p>
+              </div>
+            <hr>
+            <div class="jobdescpt">
+                  <p><strong>Job Highlights:</strong></p>
+              <ul>
+                  <li>Competitive salary with supplemental pay</li>
+                  <li>13th-month salary</li>
+                  <li>Opportunity for personal and professional growth</li>
+                  <li>Stable employment in a dynamic kitchen environment</li>
+              </ul>
+
+              <p><strong>Company Overview:</strong></p>
+              <p>Fresh Cuts Kitchen is a culinary establishment committed to providing high-quality, fresh ingredients for culinary delights.</p>
+
+              <p><strong>Responsibilities:</strong></p>
+              <ul>
+                  <li>Cut vegetables into appropriate shapes and sizes as per the requirements</li>
+                  <li>Wash and clean vegetables thoroughly before cutting</li>
+                  <li>Maintain hygiene and cleanliness standards in the working area</li>
+                  <li>Follow safety guidelines while working with sharp knives and other cutting tools</li>
+                  <li>Ensure the quality of vegetables is maintained during cutting</li>
+                  <li>Record the quantity of vegetables cut on a daily basis</li>
+                  <li>Coordinate with other kitchen staff for timely cutting of vegetables, meat, or seafood</li>
+                  <li>Perform any other duties assigned by the supervisor or manager</li>
+              </ul>
+
+              <p><strong>Requirements:</strong></p>
+              <ul>
+                  <li>2 years or more of experience in fresh food markets and restaurant kitchen preparation</li>
+                  <li>Good communication skills</li>
+                  <li>Familiarity with initial processing and cutting procedures of various vegetables, meats, and seafood</li>
+                  <li>History of long-term and stable employment</li>
+                  <li>Basic knowledge of different vegetable cutting techniques</li>
+                  <li>Ability to operate and maintain sharp cutting tools and equipment</li>
+                  <li>Understanding of safety procedures and precautions while handling sharp objects</li>
+                  <li>Attention to detail and ability to follow instructions accurately</li>
+                  <li>Willingness to work shifting schedules and graveyard shifts</li>
+                  <li>Willing to be assigned in Malate, Manila City</li>
+                  <li>Can start ASAP</li>
+              </ul>
+
+              <p><strong>Job Type:</strong> Full-time</p>
+              <p><strong>Salary:</strong> Php 17,000.00 - Php 19,000.00 per month</p>
+
+              <p><strong>Supplemental pay types:</strong></p>
+              <ul>
+                  <li>13th month salary</li>
+              </ul>
+
+              <p><strong>Ability to commute/relocate:</strong></p>
+              <p>Malate, Manila: Reliably commute or willing to relocate with an employer-provided relocation package (Required)</p>
+                </div>
+          </div>
+        
+          <!-- ........................................................ -->
+          <div id="bottom-card5-content" class="card-content">
+            <div class="job-details">
+                <h2>Job details</h2>
+                <p>
+                    <span><ion-icon name="cash-outline"></ion-icon></span>
+                    Pay <br>
+                    <a>PHP 15,000 - PHP 20,000 a month</a>
+                </p>
+                <p>
+                    <span><ion-icon name="briefcase-outline"></ion-icon></span>
+                    Job type <br>
+                    <a>Full-time</a>
+                </p>
+                <p>
+                  <span><ion-icon name="time-outline"></ion-icon></span>
+                  Shift and schedule <br>
+                  <a>8-hour shift</a>
+              </p>
+            </div>
+          <hr>
+          <div class="jobdescpt">
+                <p><strong>Full Jon Description</strong></p>
+
+                <p><strong>Position Overview:</strong></p>
+                <p>We are seeking a dynamic and results-driven Sales Executive to join our growing team. The ideal candidate 
+                  will be responsible for identifying new business opportunities, building and maintaining strong client relationships, 
+                  and achieving sales targets. If you are a motivated and ambitious individual with a passion for sales, we want to hear from you.</p>
+
+            <p><strong>Responsibilities:</strong></p>
+            <ul>
+                <li>Opening and acquiring of new accounts</li>
+                <li>Build and maintain strong relationships with existing clients, understanding their needs and providing exceptional service.</li>
+                <li>Set and achieve sales targets and revenue goals on a monthly, quarterly, and annual basis.</li>
+                <li>Prepare and deliver persuasive sales presentations to potential clients</li>
+                <li>Maintain accurate and up-to-date records of sales activities, leads, and client interactions in the CRM system.</li>
+                <li>Provide market feedback to the team to assist in product/service development.</li>
+            </ul>
+
+            <p><strong>Qalifications:</strong></p>
+            <ul>
+                <li>Proven track record in sales, with at least 2 years of successful experience in a similar role.</li>
+                <li>Strong communication, negotiation, and interpersonal skills.</li>
+                <li>Ability to work independently and as part of a team</li>
+                <li>Excellent problem-solving skills and a proactive approach to challenges.</li>
+                <li>Knowledge in MS Office</li>
+                <li>People and service-oriented</li>
+            </ul>
+
+            <p><strong>How to Apply:</strong></p>
+            <p>Interested candidates are invited to submit their resume and cover letter
+              to denzelso@adecsintlcorp.com with the subject line "Sales Executive Application - [Your Name]."</p>
+              
+              <ul>
+                <strong>Job Type:</strong>
+                <li>Full-time</li> 
+                <strong>Salary:</strong>
+                <li>Php15,000.00 - Php20,000.00 per month</li>
+                <strong>Benefits:</strong>
+                  <ul>
+                    <li>Paid training</li>
+                    <li>Transportation service provided</li>
+                  </ul>
+                </li>
+                <strong>Schedule:</strong> 
+                <li>8-hour shift</li>
+                <strong>Supplemental pay types:</strong>
+                  <ul>
+                    <li>13th month salary</li>
+                    <li>Commission pay</li>
+                  </ul>
+                </li>
+                <strong>Education:</strong>
+                <li>Bachelor's (Preferred)</li>
+                <strong>Experience:</strong>
+                <li>  Sales: 2 years (Preferred)</li>
+                <strong>Language:</strong> 
+                <li> English (Preferred)</li>
+                <strong>Willingness to travel:</strong> 
+                <li> 50% (Preferred)</li>
+              </ul>
+              </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  </div>
+
+<hr>
+<footer class="site-footer">
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved
+          </p><br>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="social-icons">
+            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+  
+  <script src="main.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="https://kit.fontawesome.com/b6531956e9.js" crossorigin="anonymous"></script>
+  <script src="modal.js"></script>
+</body>
+<div id="loginRequiredContent" ></div>
+</html>

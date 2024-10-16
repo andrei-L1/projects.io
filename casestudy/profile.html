@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="profile.css">
+  
+  
+    <link rel="stylesheet" href="dropdown.css">
+</head>
+<body>
+  <div id="loginRequiredContent"></div>
+  <div id="header">
+    <div class="container">
+        <nav>
+            <ul class="menu">
+                <a class="brand" href="index.html"><h1>CareerCore</h1></a>
+                <img src="logo.png">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+                <div class="dropdown">
+                  <button class="dropbtn"><li><a href="about.html">About us</a></li></button>
+                  <div class="dropdown-content">
+                    <a href="mission.html">Mission</a>
+                    <a href="vision.html">Vision</a>
+                    <a href="tagline.html">Tagline</a>
+                    <a href="history.html">History</a>
+                  </div>
+                </div>
+            </ul>
+            <ul id="signInMenu">
+              <button class="Btnnn" id="logOutBtn">
+                <div class="sign">
+                  <svg viewBox="0 0 512 512">
+                    <path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 
+                    406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 
+                    32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 
+                    14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0
+                     32 14.3 32 32s-14.3 32-32 32z"></path>
+                  </svg>
+                </div>
+                <div class="text">Logout</div>
+              </button>
+              <li><a id="signInLink" href="login.html">Sign In</a></li>
+              <li id="profileLi" style="display: none;"><a href="profile.html">Profile</a></li>
+              <li class="vertical-line"></li>
+              <li><a href="createjob.html">Post Job</a></li>
+            </ul>
+        </nav> 
+    </div> 
+  </div>
+
+  <div class="parent-1">
+    <div class="div1">
+      <div class="card-1">
+        <div class="card-1-details">
+          <img src="https://www.w3schools.com/howto/img_avatar.png" width="50%">
+          <div class="text-title" id="name">Admin</div>
+          <p id="job">Full Stack Developer</p><br>
+          <ul>
+            <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fab fa-google-plus-g" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="div2">
+        <div class="card-2">
+          <br>
+          <br>
+          <div class="setting">
+            <h3 onclick="profile()"><i class='fas fa-address-card'></i> Profile</h3>
+          </div><br><br>
+          <hr> <br><br>
+          <div class="setting" onclick="security()">
+            <h3><i class="fa-solid fa-lock"></i> Security</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="div3">
+      <form action="" id="form-profile">
+        <div class="card-3">
+          <div class="profile">
+            <h2>Contact Details:</h2><br>
+            <hr><br><br>
+  
+            <div class="hidden">
+              <i class="fa-solid fa-user"></i> Name: <div class="contact-details"><input type="text" id="name-edit" name="name-edit"></div><br><hr><br>
+            </div>
+  
+            <div class="hidden">
+              <i class="fa-solid fa-briefcase"></i> Job: <div class="contact-details"><input type="text" id="job-edit" name="job-edit"></div><br><hr><br>
+            </div>
+  
+            <div class="visible">
+              <i class="fa fa-envelope" aria-hidden="true"></i> Email: <div class="contact-details" id="email">xxxxxxxxx@gmail.com</div><br><hr><br>
+            </div>
+  
+            <div class="hidden">
+              <i class="fa-solid fa-phone"></i> Phone Number: <div class="contact-details"><input type="text" id="phone-edit" name="phone-edit"></div><br><hr><br>
+            </div>
+  
+            <div class="visible">
+              <i class="fa-solid fa-phone"></i> Phone Number: <div class="contact-details" id="phone">0xxxxxxxx</div><br><hr><br>
+            </div>
+  
+            <div class="hidden">
+              <i class="fa-solid fa-house"></i> Address: <div class="contact-details"><input type="text" id="address-edit" name="address-edit"></div><br><hr><br><br>
+            </div>
+  
+            <div class="visible">
+              <i class="fa-solid fa-house"></i> Address: <div class="contact-details" id="address">Txxxxx, xxxxx xxxx</div><br><hr><br><br>
+            </div>
+  
+            <div id="button-container">
+              <input type="button" onclick="editProfile()" value="Edit" id="button" class="btn">
+            </div>
+          </div>
+  
+          <div class="security">
+            <h2>Account Details:</h2><br>
+            <hr><br><br>
+  
+            <i class="fa-solid fa-phone"></i> Change Password: <br><br>
+            <div class="security-details">
+              <input type="password" id="currentPassword" placeholder="Current Password"> <br><br>
+              <input type="password" id="newPassword" placeholder="New Password"><br><br>
+              <input type="password" id="repeatNewPassword" placeholder="Repeat New Password">
+            </div><br>
+  
+            <br><hr><br>
+  
+            <div id="button-container-sec">
+              <input type="button" onclick="editSec()" value="Submit" id="button-6" class="btn">
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+
+<hr>
+<footer class="site-footer-profile">
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved
+          </p><br>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="social-icons">
+            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+  
+  
+</body>
+<div id="guestContent" ></div>
+<script src="login.js"></script>
+<script src="main.js"></script>
+  <script>
+    function profile(event) {
+    var hiddenElements = document.getElementsByClassName("hidden");
+    var profile = document.querySelector('.profile');
+    var security = document.querySelector('.security');
+    if (profile) {
+      profile.style.display = 'block';
+      security.style.display = 'none';
+    }
+    
+    
+    for (var i = 0; i < hiddenElements.length; i++) {
+      if (hiddenElements[i].style.display === "block") {
+     
+        return; // Stop further processing if any hidden element is visible
+      }
+    }
+    }
+    
+    function security(event) {
+    // Get elements by class name
+    var hiddenElements = document.getElementsByClassName("hidden");
+    var hiddenElementsSec = document.getElementsByClassName("hidden-sec");
+    var securityElements = document.querySelector('.security');
+    var profile = document.querySelector('.profile');
+    
+    // Check if any "hidden" element is visible
+    for (var i = 0; i < hiddenElementsSec.length; i++) {
+      if (hiddenElementsSec[i].style.display === "block") {
+       
+        return; // Stop further processing if any hidden element is visible
+      }
+    }
+    
+    // Toggle the display of elements
+    if (securityElements) {
+      securityElements.style.display = 'block';
+      profile.style.display = 'none';
+    
+      // Loop through hiddenElementsSec collection and set display to 'none'
+      for (var j = 0; j < hiddenElementsSec.length; j++) {
+        hiddenElementsSec[j].style.display = 'none';
+      }
+    }
+    }
+    //Profile Edit
+    function editProfile() {
+     
+      let hiddenElements = document.getElementsByClassName("hidden");
+      let visibleElements = document.getElementsByClassName("visible");
+      let buttonContainer = document.getElementById("button-container");
+     
+      for (let element of hiddenElements) {
+        element.style.display = "block";
+      }
+    
+      for (let element of visibleElements) {
+        element.style.display = "none";
+      }
+    
+    
+      buttonContainer.innerHTML = `
+    
+        <input type="button" onclick="cancelEditProfile()" value="Cancel" id="button-2" class="btn">
+        <input type="button" onclick="saveChangesProfile()" value="Save Changes" id="button-3" class="btn">
+      `;
+    }
+    
+    
+    
+     //Profile Change
+    function saveChangesProfile() {
+    
+      let hiddenElements = document.getElementsByClassName("hidden");
+      let visibleElements = document.getElementsByClassName("visible");
+      let buttonContainer = document.getElementById("button-container");
+      let new_name = document.getElementById("name-edit").value;
+      let new_job = document.getElementById("job-edit").value;
+      
+      let new_phone = document.getElementById("phone-edit").value;
+      let new_address = document.getElementById("address-edit").value;
+      
+      if (new_name.trim() === "") {
+        alert("Name cannot be empty. Please fill in all required fields.");
+        return;
+      }
+      else if(new_job.trim() === ""){
+        alert("Job cannot be empty. Please fill in all required fields.");
+        return;
+      }
+     
+      else if(new_phone.trim() === ""){
+        alert("Phone cannot be empty. Please fill in all required fields.");
+        return;
+      }
+      else if(new_address.trim() === ""){
+        alert("Address cannot be empty. Please fill in all required fields.");
+        return;
+      }
+      else{
+       for (let element of hiddenElements) {
+         element.style.display = "none";
+       }
+    
+       for (let element of visibleElements) {
+         element.style.display = "block";
+       }
+      
+      
+      buttonContainer.innerHTML = `
+        <input type="button" onclick="editProfile()" value="Edit" id="button" class="btn">
+      `;
+    
+      document.getElementById("name").innerText = new_name;
+      document.getElementById("job").innerText = new_job;
+      document.getElementById("phone").innerText = new_phone;
+      document.getElementById("address").innerText = new_address;
+    }
+    }
+    //Cancel Profile Change
+    function cancelEditProfile() {
+      let hiddenElements = document.getElementsByClassName("hidden");
+      let visibleElements = document.getElementsByClassName("visible");
+      let buttonContainer = document.getElementById("button-container");
+    
+      for (let element of hiddenElements) {
+        element.style.display = "none";
+      }
+    
+      for (let element of visibleElements) {
+        element.style.display = "block";
+      }
+    
+      buttonContainer.innerHTML = `
+        <input type="button" onclick="editProfile()" value="Edit" class="btn">
+      `;
+    }
+    
+    
+    
+    function clearInputBoxes() {
+      document.getElementById('currentPassword').value = '';
+      document.getElementById('newPassword').value = '';
+      document.getElementById('repeatNewPassword').value = '';
+    }</script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="https://kit.fontawesome.com/b6531956e9.js" crossorigin="anonymous"></script>
+  
+</html>
